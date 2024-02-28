@@ -1,0 +1,36 @@
+.title {
+  font-size: 64px;
+  text-align: center;
+  font-family: "Bigelow Rules", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.barChart {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 15px;
+  margin-top: 15px;
+
+  &Item {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    line-height: 100%;
+    text-align: center;
+  }
+}
+
+.description {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  text-align: center;
+}

@@ -35,11 +35,11 @@ export function buildPlugins(options: BuildOptions): webpack.Configuration['plug
       chunkFilename: 'css/[name].[contenthash:8].css'
     }))
     // plugins.push(new BundleAnalyzerPlugin())
-    plugins.push(new CopyPlugin({
-      patterns: [
-        { from: path.resolve(options.paths.public, 'locales'), to: path.resolve(options.paths.output, 'locales') }
-      ]
-    }))
+    // plugins.push(new CopyPlugin({
+    //   patterns: [
+    //     { from: path.resolve(options.paths.public, 'locales'), to: path.resolve(options.paths.output, 'locales') }
+    //   ]
+    // }))
   }
 
   return plugins

@@ -6,6 +6,17 @@ import ReactRefreshTypescript from 'react-refresh-typescript'
 export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   const isDev = options.mode === 'development'
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+      }
+    }
+  }
+
   const assetLoader = {
     test: /\.(png|jpg|jpeg|gif)$/i,
     type: 'asset/resource'
@@ -21,7 +32,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   }
 
   const scssLoader = {
-    test: /\.s[ac]ss$/i,
+    test: /\.(s[ac]ss|css)$/i,
     use: [
       // Creates `style` nodes from JS strings
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -60,6 +71,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions['rules'] {
   }
 
   return [ // в массиве rules указываются лоадеры
+    babelLoader,
     assetLoader,
     scssLoader,
     tsLoader,
