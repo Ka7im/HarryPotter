@@ -10,9 +10,10 @@ import { useHPCharacters } from '@/hooks/useHPCharacters';
 import { splitByHouse } from '@/utils/splitByHouse/splitByHouse';
 import { getByDate } from '@/utils/getByDate/getByDate';
 
+const DEFAULT_DATE = '1975-01-30'
 
 export const App = () => {
-  const [fromDate, setFromDate] = useState(new Date('1975-01-30'));
+  const [fromDate, setFromDate] = useState(new Date(DEFAULT_DATE));
   const [toDate, setToDate] = useState(new Date());
 
   const [chartData, setChartData] = useState<Array<{ name: House, count: number }>>([

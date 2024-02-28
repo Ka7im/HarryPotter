@@ -49,7 +49,8 @@ describe('splitByHouse', () => {
     { dateOfBirth: '30-07-1980', house: 'Slytherin' }]
 
     const expectResult: Record<House, ICharacter[]> = {
-      "": [], Gryffindor: [{ dateOfBirth: '30-07-1980', house: 'Gryffindor' },],
+      "": [],
+      Gryffindor: [{ dateOfBirth: '30-07-1980', house: 'Gryffindor' },],
       Hufflepuff: [{ dateOfBirth: '30-07-1980', house: 'Hufflepuff' }],
       Ravenclaw: [{ dateOfBirth: '30-07-1980', house: 'Ravenclaw' }],
       Slytherin: [{ dateOfBirth: '30-07-1980', house: 'Slytherin' }]
