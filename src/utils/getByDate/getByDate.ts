@@ -9,11 +9,6 @@ export const getByDate = (characters: ICharacter[], from: Date, to: Date) => {
     const charBirthDate = new Date()
     charBirthDate.setFullYear(year, month, day)
 
-    console.log('from', from)
-    console.log('char', charBirthDate)
-    console.log('to', to)
-    console.log('boolean', charBirthDate.getTime() >= from.getTime() && charBirthDate.getTime() <= to.getTime())
-
     return charBirthDate.getTime() >= from.getTime() && charBirthDate.getTime() <= to.getTime()
   })
 }

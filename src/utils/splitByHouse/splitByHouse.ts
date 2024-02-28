@@ -7,7 +7,5 @@ export const splitByHouse = (characters: ICharacter[]) => {
     splittedCharacters[char.house].push(char)
   })
 
-  console.log(splittedCharacters)
-
   return splittedCharacters
 }
